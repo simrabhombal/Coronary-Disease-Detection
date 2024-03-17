@@ -1,0 +1,14 @@
+/* D:\MY PROJECT\Disease\static\css\styles.css */
+
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your custom styles go here */
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Add more styles as needed */

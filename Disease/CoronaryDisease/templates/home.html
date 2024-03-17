@@ -1,0 +1,21 @@
+<!-- D:\MY PROJECT\Disease\CoronaryDisease\templates\home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="relative z-10 max-w-2xl text-center">
+        <h1 class="text-4xl font-bold mb-2 text-white mt-2">Upload ECG Image and Get Results</h1>
+        
+        <p class="text-lg leading-relaxed mx-4 font-semibold">
+            Welcome to our Coronary Disease Detection platform. Upload your ECG image below and discover your results using our advanced machine learning algorithms.
+        </p>
+        
+        <!-- Upload Image Section -->
+        <form method="post" enctype="multipart/form-data" action="{% url 'result' %}">
+            {% csrf_token %}
+            <label for="ecgImage" class="block text-sm font-medium text-white">Choose an ECG Image:</label>
+            <input type="file" id="ecgImage" name="ecg_image" accept="image/*" class="mt-1 p-2 border rounded-md mr-2">
+
+            <button type="submit" class="bg-blue-600 text-white py-2 px-4 mt-4  rounded-md">Get Results</button>
+        </form>
+    </div>
+{% endblock %}

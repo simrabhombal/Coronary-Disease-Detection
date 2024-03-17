@@ -1,0 +1,58 @@
+<!-- D:\MY PROJECT\Disease\CoronaryDisease\templates\base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Coronary Disease Detection{% endblock %}</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    
+</head>
+<body class="bg-no-repeat bg-cover bg-center min-h-screen overflow-hidden">
+
+    <!-- Tailwind-styled Navigation Bar -->
+    <nav class="bg-blue-900 text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <a class="text-2xl font-bold" href="{% url 'home' %}">Coronary Disease Detection</a>
+            <div class="flex items-center font-bold">
+                <a class="mr-4" href="{% url 'home' %}">Home</a>
+                <a class="mr-4" href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'about' %}">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section with Background Image -->
+    <div class="container mx-auto relative w-full">
+        <div class="bg-no-repeat bg-cover bg-center h-screen flex items-center justify-center bg-black bg-opacity-50 text-white" style="background-image: url('https://bestcare.org/sites/default/files/styles/featured_media/public/2022-02/HeartStethoscope.jpg?h=54eaba75&itok=LxAbyOho');">
+            <div class="absolute inset-0 bg-black opacity-60 max-w z-0"></div>
+
+            <!-- Default Content Section with Interesting Text and Upload Button -->
+            {% block content %}
+            <div class="text-center relative z-10 max-w-2xl">
+                <h1 class="text-4xl font-bold mb-2 text-white mt-2">Coronary Disease Detection by ECG Images</h1>
+                
+                <p class="text-lg leading-relaxed mx-4 font-semibold">
+                    Coronary disease detection using ECG images is revolutionizing healthcare. Our advanced machine learning algorithms ensure accurate diagnoses, paving the way for early intervention and treatment.
+                </p>
+                <p class="text-lg mx-4 font-semibold">
+                    Explore the future of healthcare with our innovative technology. Upload your ECG image below and experience the power of machine learning in coronary disease detection.
+                </p>
+                <button onclick="window.location.href=`{% url 'home' %}`" class="bg-red-700 rounded-md text-white py-2 px-4 mt-4">Upload Image</button>
+                <p> .</p>
+                
+            </div>
+
+            <!-- Custom Content from Child Templates -->
+            {% endblock %}
+        </div>
+    </div>
+
+    <!-- Include Tailwind JavaScript (Optional) -->
+    <!-- Note: Tailwind CSS doesn't require JavaScript, this is only included for completeness -->
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+</body>
+</html>

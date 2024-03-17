@@ -1,0 +1,34 @@
+<!-- D:\MY PROJECT\Disease\CoronaryDisease\templates\result.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="text-center relative z-10 max-w-2xl">
+        <h1 class="text-4xl font-bold mb-2 text-white mt-2">ECG Image Results</h1>
+
+        {% if predicted_class_label %}
+            {% if predicted_class_label == 'normal' %}
+                <p class="text-lg leading-relaxed mx-4 font-semibold text-white">
+                 
+                    Your ECG image appears <b>normal</b>, indicating that your heart is functioning within expected parameters. This is a positive sign, suggesting that your heart's electrical activity is healthy and there are no immediate concerns. However, it's important to continue monitoring your heart health and maintaining a healthy lifestyle to support overall well-being.
+                </p>
+            {% elif predicted_class_label == 'abnormal' %}
+                <p class="text-lg leading-relaxed mx-4 font-semibold text-white">
+                    Your ECG image shows <b>abnormalities </b>in the heart's electrical activity, which may indicate underlying issues that require attention. While abnormal ECG findings can vary in severity, it's essential not to ignore them. We strongly recommend consulting with a healthcare professional to further evaluate these abnormalities. Your healthcare provider can provide personalized guidance and recommendations based on your specific situation.
+                </p>
+            {% elif predicted_class_label == 'myocardial_infarction' %}
+                <p class="text-lg leading-relaxed mx-4 font-semibold text-white">
+                    Your ECG image indicates signs consistent with <b>myocardial infarction </b>(heart attack), a serious medical condition that requires immediate attention. Symptoms of myocardial infarction may include chest pain, shortness of breath, and discomfort in the upper body. If you are experiencing any of these symptoms, it is crucial to seek emergency medical assistance without delay. Time is of the essence and prompt intervention can greatly improve outcomes. Please do not hesitate to contact emergency services or visit the nearest healthcare facility for urgent medical care.
+                </p>
+            {% endif %}
+        {% else %}
+            <p class="text-lg leading-relaxed mx-4 font-semibold text-white">
+                No result available. Please upload an ECG image.
+            </p>
+        {% endif %}
+
+        <div class="mt-5">
+            <a href="{% url 'home' %}" class="bg-blue-600 text-white py-2 px-4 rounded-md">Go Back to Home</a>
+        </div>
+    </div>
+{% endblock %}
