@@ -1,9 +1,9 @@
-# Coronary-Disease-Detection
-# Coronary Disease Detection Using ECG Images
+
+# Coronary Disease Detection by ECG Images using Machine Learning
 
 ## Introduction
 
-Coronary artery disease (CAD) remains one of the leading causes of morbidity and mortality worldwide. CAD occurs when the coronary arteries, which supply blood to the heart muscle, become narrowed or blocked due to the buildup of plaque. This condition can lead to severe complications such as heart attacks, angina, and sudden cardiac death.
+Coronary disease remains one of the leading causes of morbidity and mortality worldwide. CAD occurs when the coronary arteries, which supply blood to the heart muscle, become narrowed or blocked due to the buildup of plaque. This condition can lead to severe complications such as heart attacks, angina, and sudden cardiac death.
 
 Early detection and accurate diagnosis of coronary disease are crucial for effective intervention and treatment. Traditional diagnostic methods, such as stress tests and coronary angiography, can be invasive, costly, and time-consuming. As a result, there is a growing need for non-invasive, efficient, and accurate diagnostic tools.
 
