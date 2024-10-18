@@ -90,4 +90,4 @@ Install the required Python libraries using the `requirements.txt` file, which i
 Open your web browser and navigate to 'http://127.0.0.1:8000/'.
 
 ## Demo Video
-   https://streamable.com/bko6oh
+   https://drive.google.com/file/d/1ksQqtOJsoTXojP5pWF66QHJGMpbkneFl/view?usp=drive_link
